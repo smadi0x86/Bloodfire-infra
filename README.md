@@ -1,7 +1,7 @@
 # Bloodfire-infra: Red Team Infrastructure
 
 <div align="center">
-  <img src="https://github.com/smadi0x86/bloodfire-infra/assets/75253629/4f9ba8b1-357f-422e-9de4-fc626f2a1eb0" alt="Fire&Blood">
+  <img src="https://github.com/smadi0x86/Bloodfire-infra/assets/75253629/0a2afe55-f957-4882-abb0-9e80d2041517" alt="Fire-Blood">
 </div>
 
 ## Overview
