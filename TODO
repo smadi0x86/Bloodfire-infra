@@ -1,0 +1,12 @@
+- Update Ansible/teamserver/teamserver.yml to install havoc correctly with go latest version (sudo snap install go --classic and export PATH=$PATH:/snap/bin/go/bin)
+- Edit /etc/ssh/sshd_config to:
+
+```
+  X11Forwarding yes
+  X11DisplayOffset 10
+  X11UseLocalhost no
+```
+
+- Check if teamserver can be started with a profile without doing it manually (./havoc server --profile ./profiles/havoc.yaotl -v --debug)
+- Install havoc client on bastion host
+- Change bastion host instace type to t3.medium
