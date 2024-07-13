@@ -1,6 +1,6 @@
 resource "aws_instance" "bastion" {
   ami                         = var.ami_id
-  instance_type               = "t2.micro"
+  instance_type               = "t3.medium"
   subnet_id                   = var.subnet_id
   key_name                    = var.key_name
   vpc_security_group_ids      = [aws_security_group.bastion_sg.id]
@@ -71,6 +71,7 @@ resource "null_resource" "install_redelk" {
     inline = [
       "Downloading 'RedELK...'",
       "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook /home/ubuntu/Ansible/redelk/download_redelk.yml",
+      "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i /home/ubuntu/Ansible/client/inventory.ini /home/ubuntu/Ansible/client/client.yaml",
     ]
   }
 }
